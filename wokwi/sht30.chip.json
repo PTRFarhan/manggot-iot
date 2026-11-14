@@ -1,0 +1,9 @@
+{
+  "name": "SHT30",
+  "author": "Manggot IoT",
+  "pins": ["VCC", "GND", "SDA", "SCL"],
+  "controls": [
+    { "id": "temperature", "label": "Suhu (C)", "type": "range", "min": -10, "max": 60, "step": 0.1 },
+    { "id": "humidity", "label": "Kelembapan (%RH)", "type": "range", "min": 0, "max": 100, "step": 0.5 }
+  ]
+}

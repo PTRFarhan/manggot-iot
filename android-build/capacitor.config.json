@@ -1,0 +1,10 @@
+{
+  "appId": "id.manggot.iot",
+  "appName": "Manggot IoT",
+  "webDir": "www",
+  "server": { "androidScheme": "https" },
+  "android": { "backgroundColor": "#0b110e" },
+  "plugins": {
+    "LocalNotifications": { "smallIcon": "ic_launcher_foreground", "iconColor": "#a3e635" }
+  }
+}

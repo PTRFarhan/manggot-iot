@@ -1,0 +1,3 @@
+# Library untuk simulasi Wokwi
+LiquidCrystal I2C
+ArduinoJson

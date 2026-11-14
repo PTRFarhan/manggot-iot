@@ -1,0 +1,36 @@
+{
+  "rules": {
+    "users": {
+      ".read": "auth != null",
+      "$uid": {
+        ".write": "auth != null && (root.child('users').child(auth.uid).child('role').val() === 'admin' || (!root.child('users').exists() && auth.uid === $uid))"
+      }
+    },
+    "devices": {
+      "$dev": {
+        ".read": "auth != null && (root.child('users').child(auth.uid).exists() || auth.token.email === 'esp32@manggot.app')",
+        "status": {
+          ".write": "auth != null && auth.token.email === 'esp32@manggot.app'"
+        },
+        "config": {
+          ".write": "auth != null && (root.child('users').child(auth.uid).exists() || auth.token.email === 'esp32@manggot.app')"
+        },
+        "system": {
+          ".write": "auth != null && (root.child('users').child(auth.uid).child('role').val() === 'admin' || auth.token.email === 'esp32@manggot.app')"
+        },
+        "history": {
+          ".write": "auth != null && (auth.token.email === 'esp32@manggot.app' || root.child('users').child(auth.uid).child('role').val() === 'admin')"
+        },
+        "events": {
+          ".indexOn": [
+            "ts"
+          ],
+          ".write": "auth != null && (root.child('users').child(auth.uid).exists() || auth.token.email === 'esp32@manggot.app')"
+        },
+        "otabin": {
+          ".write": "auth != null && (root.child('users').child(auth.uid).child('role').val() === 'admin' || auth.token.email === 'esp32@manggot.app')"
+        }
+      }
+    }
+  }
+}

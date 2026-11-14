@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" font-family="Segoe UI, Arial, sans-serif">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker></defs>
+  <rect width="1200" height="520" fill="#fff"/>
+  <text x="40" y="50" font-size="26" font-weight="700" fill="#0f172a">Arsitektur Sistem Manggot IoT</text>
+  <rect x="40" y="120" width="300" height="300" rx="18" fill="#1e293b"/>
+  <text x="190" y="160" font-size="20" font-weight="700" fill="#fff" text-anchor="middle">ESP32</text>
+  <g font-size="14" fill="#cbd5e1"><text x="65" y="200">• Baca SHT30 tiap 1 detik</text><text x="65" y="228">• Kontrol AUTO / MANUAL</text><text x="65" y="256">• LCD 20x4 + animasi</text><text x="65" y="284">• Setelan di NVS ("EEPROM")</text><text x="65" y="312">• Riwayat offline di LittleFS</text><text x="65" y="340">• Multi WiFi berprioritas</text><text x="65" y="368">• Hotspot MANGGOT-SETUP</text><text x="65" y="396">• OTA dari file / URL</text></g>
+  <rect x="450" y="150" width="300" height="240" rx="18" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+  <text x="600" y="190" font-size="20" font-weight="700" fill="#9a3412" text-anchor="middle">Firebase</text>
+  <g font-size="14" fill="#7c2d12"><text x="475" y="228">Authentication (email/password)</text><text x="475" y="258">Realtime Database:</text><text x="490" y="284">status · config · system</text><text x="490" y="310">history · events · otabin</text><text x="490" y="336">users (admin / operator)</text><text x="475" y="366">Rules = kunci keamanan</text></g>
+  <rect x="860" y="100" width="300" height="150" rx="18" fill="#ecfccb" stroke="#65a30d" stroke-width="2"/>
+  <text x="1010" y="140" font-size="20" font-weight="700" fill="#365314" text-anchor="middle">Aplikasi Android (APK)</text>
+  <text x="1010" y="170" font-size="14" fill="#3f6212" text-anchor="middle">Capacitor · build-apk.bat</text>
+  <text x="1010" y="196" font-size="14" fill="#3f6212" text-anchor="middle">monitor · kontrol · riwayat · OTA</text>
+  <rect x="860" y="290" width="300" height="150" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="1010" y="330" font-size="20" font-weight="700" fill="#0c4a6e" text-anchor="middle">Web (GitHub Pages)</text>
+  <text x="1010" y="360" font-size="14" fill="#075985" text-anchor="middle">ptrfarhan.github.io/manggot-iot</text>
+  <text x="1010" y="386" font-size="14" fill="#075985" text-anchor="middle">tampilan sama dengan APK</text>
+  <g stroke="#64748b" stroke-width="3" fill="none"><path d="M340 270 H450" marker-end="url(#a)" marker-start="url(#a)"/><path d="M750 230 H860" marker-end="url(#a)" marker-start="url(#a)"/><path d="M750 320 H860" marker-end="url(#a)" marker-start="url(#a)"/></g>
+  <text x="395" y="258" font-size="12" fill="#475569" text-anchor="middle">HTTPS REST</text>
+  <text x="395" y="292" font-size="12" fill="#475569" text-anchor="middle">tiap 2-6 dtk</text>
+  <text x="805" y="218" font-size="12" fill="#475569" text-anchor="middle">realtime</text>
+  <rect x="40" y="450" width="1120" height="50" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="60" y="481" font-size="14" fill="#334155">Alur: aplikasi menulis config/system → ESP32 membaca lalu menyimpan ke NVS → ESP32 mengirim status (5 dtk) dan riwayat (tiap interval, ditahan di flash saat offline).</text>
+</svg>
